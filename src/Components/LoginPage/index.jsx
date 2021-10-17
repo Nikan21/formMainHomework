@@ -5,9 +5,11 @@ import './loginPage.sass'
 
 export default function LoginPage() {
     return (
-        <body className = 'loginWindow'>
+        <div className = 'loginWindow'>
+            <header className = 'header'>
             <Logo />
             <SignUpButton />
-        </body>
+            </header>
+        </div>
     )
 }

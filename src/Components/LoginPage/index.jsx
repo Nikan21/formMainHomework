@@ -1,6 +1,6 @@
 import React from 'react'
-import Logo from './LoginHeader/LoginLogo/index'
-import SignUpButton from './LoginHeader/LoginSignUp/index'
+import Logo from './LoginLogo/index'
+import SignUpButton from './LoginSignUp/index'
 import './loginPage.sass'
 
 export default function LoginPage() {

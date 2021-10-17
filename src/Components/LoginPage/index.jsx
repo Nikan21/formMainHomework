@@ -1,6 +1,7 @@
 import React from 'react'
 import Logo from './LoginLogo/index'
 import SignUpButton from './LoginSignUp/index'
+import MainText from './LoginMainText/index'
 import './loginPage.sass'
 
 export default function LoginPage() {
@@ -10,6 +11,7 @@ export default function LoginPage() {
             <Logo />
             <SignUpButton />
             </header>
+            <MainText />
         </div>
     )
 }

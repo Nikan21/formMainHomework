@@ -16,9 +16,11 @@ export default function LoginForm() {
         {(formikProps) =>{
             return(
                 <Form>
-                    <Field name = 'email'></Field>
-                    <Field name = 'password'></Field>
+                    <Field classNmae = 'emailInput' name = 'email'></Field>
+                    <Field classNmae = 'passwordInput' name = 'password' type = 'password'></Field>
                     <Field name = 'checkbox' type = 'checkbox'></Field>
+                    <a href="https://www.squadhelp.com/forgot_password.php">Forgot Password</a>
+                    <button className = 'loginButton' type = 'submit'>LOGIN</button>
                 </Form>
             )
         }}

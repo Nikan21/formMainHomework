@@ -2,6 +2,7 @@ import React from 'react'
 import Logo from './LoginLogo/index'
 import SignUpButton from './LoginSignUp/index'
 import MainText from './LoginMainText/index'
+import LoginForm from './LoginForm/index'
 import './loginPage.sass'
 
 export default function LoginPage() {
@@ -12,6 +13,7 @@ export default function LoginPage() {
             <SignUpButton />
             </header>
             <MainText />
+            <LoginForm />
         </div>
     )
 }

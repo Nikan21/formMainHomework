@@ -1,12 +1,14 @@
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import LoginPage from './Components/LoginPage/index'
+import RouterLink from './Components/RouterLinks/index'
 
 function App() {
   return (
     <Router>
-      <Link to="/login">Login Page</Link>
-      <Link to="/signUp">Sign Up</Link>
       <Switch>
+      <Route exact path="/">
+          <RouterLink />
+        </Route>
         <Route exact path="/login">
           <LoginPage />
         </Route>

@@ -3,6 +3,7 @@ import Logo from './LoginLogo/index'
 import SignUpButton from './LoginSignUp/index'
 import MainText from './LoginMainText/index'
 import LoginForm from './LoginForm/index'
+import SignUpWithGoogle from './LoginSignUpWithGoogle/index'
 import styles from './loginPage.module.sass'
 
 export default function LoginPage() {
@@ -12,8 +13,11 @@ export default function LoginPage() {
             <Logo />
             <SignUpButton />
             </header>
+            <main className = {styles.main}>
             <MainText />
             <LoginForm />
+            <SignUpWithGoogle />
+            </main>
         </div>
     )
 }

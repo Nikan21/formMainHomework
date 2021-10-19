@@ -1,9 +1,9 @@
 import React from 'react'
-import './loginMainText.sass'
+import styles from './loginMainText.module.sass'
 
 export default function MainText() {
     return (
-        <h1 className = 'loginMainText'>
+        <h1 className = {styles.loginMainText}>
             LOGIN TO YOUR ACCOUNT
         </h1>
     )

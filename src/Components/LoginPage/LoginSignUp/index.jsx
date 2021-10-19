@@ -1,8 +1,8 @@
 import React from 'react'
-import './signButton.sass'
+import styles from './signButton.module.sass'
 
 export default function SignUpButton() {
     return (
-        <a className = 'signUpButton' href="/signUp">Signup</a>
+        <a className = {styles.signUpButton} href="/signUp">Signup</a>
     )
 }

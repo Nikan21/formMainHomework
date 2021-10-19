@@ -1,8 +1,10 @@
+import { Link } from "react-router-dom";
+
 export default function RouterPaige() {
   return (
     <nav>
-      <a href="/login">Login Page</a>
-      <a href="/signUp">Sign Up Page</a>;
+      <Link to="/login">Login Page</Link>
+      <Link to="/signUp">Sign Up Page</Link>;
     </nav>
   );
 }

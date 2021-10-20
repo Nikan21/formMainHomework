@@ -1,5 +1,6 @@
 import React from "react";
 import { Formik, Form, Field } from "formik";
+import styles from './Form.module.sass';
 
 export default function LoginForm() {
 
@@ -21,9 +22,9 @@ export default function LoginForm() {
     >
         {(formikProps) =>{
             return(
-                <Form>
-                    <Field className = 'emailInput' name = 'email'></Field>
-                    <Field className = 'passwordInput' name = 'password' type = 'password'></Field>
+                <Form className= {styles.form}>
+                    <Field className = 'emailInput' name = 'email' placeholder = 'Email'></Field>
+                    <Field className = 'passwordInput' name = 'password' type = 'password' placeholder = 'Password'></Field>
                     <Field name = 'checkbox' type = 'checkbox'></Field>
                     <a href="https://www.squadhelp.com/forgot_password.php">Forgot Password</a>
                     <button className = 'loginButton' type = 'submit'>LOGIN</button>

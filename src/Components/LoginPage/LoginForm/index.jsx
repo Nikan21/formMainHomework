@@ -23,11 +23,14 @@ export default function LoginForm() {
         {(formikProps) =>{
             return(
                 <Form className= {styles.form}>
-                    <Field className = 'emailInput' name = 'email' placeholder = 'Email'></Field>
-                    <Field className = 'passwordInput' name = 'password' type = 'password' placeholder = 'Password'></Field>
-                    <Field name = 'checkbox' type = 'checkbox'></Field>
-                    <a href="https://www.squadhelp.com/forgot_password.php">Forgot Password</a>
-                    <button className = 'loginButton' type = 'submit'>LOGIN</button>
+                    <Field className = {styles.emailInput} name = 'email' placeholder = 'Email adress' required></Field>
+                    <Field className = {styles.passwordInput} name = 'password' type = 'password' placeholder = 'Password' required></Field>
+                    <div className = {styles.wrapperCheckAndText}>
+                    <Field name = 'checkbox' type = 'checkbox' required></Field>
+                    <span className = {styles.textNearCheckbox}>Remember Me</span>
+                    <a className = {styles.forgotPass} href="https://www.squadhelp.com/forgot_password.php">Forgot Password</a>
+                    </div>
+                    <button className = {styles.loginButton} type = 'submit'>LOGIN</button>
                 </Form>
             )
         }}

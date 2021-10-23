@@ -8,7 +8,6 @@ export default function LoginForm() {
   const initialValues = {
     email: "",
     password: "",
-    checkbox: false,
   };
 
   const onSumbit = (values, formikBag) => {
@@ -37,7 +36,7 @@ export default function LoginForm() {
       validationSchema={scheme}
     >
       {({ errors, touched }) => {
-        const errorEmails = classNames(styles.errorEmailDefault, {
+        const errorEmail = classNames(styles.errorEmailDefault, {
           [styles.errorEmail]: errors.email && touched.email,
         });
 
@@ -64,7 +63,7 @@ export default function LoginForm() {
                 type="text"
                 placeholder="Email adress"
               />
-              <div className={errorEmails}>
+              <div className={errorEmail}>
                 <ErrorMessage name="email" />
               </div>
             </label>

@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./signUpWithGoogle.module.sass";
-import logoGoogle from "../../../assets/images/google.svg";
+import logoGoogle from "../../assets/images/google.svg";
 
 export default function SignUpWithGoogle() {
   return (

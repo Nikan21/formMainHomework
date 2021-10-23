@@ -1,44 +1,8 @@
 .form
     display: flex
     flex-direction: column
-    width: 35%
     height: 35vh
-
-.wrapperCheckAndText
-    display: flex
-    justify-content: space-between
-    margin-top: 5px
-
-.emailInput,
-.passwordInput
-    color: #9CA8B7
-    width: 100%
-    box-sizing: border-box
-    font-size: 16px
-    padding: 21px 23px
-    border: 2px solid white
-    border-radius: 4px
-    margin-bottom: 35px
-
-.textNearCheckbox
-    color: #fff
-    font-size: 15px
-    margin: 0 355px 25px 0
-
-.forgotPass
-    color: #fff
-    font-size: 15px
-    text-decoration: none
-
-.loginButton
-    background-color: #28d2d0
-    border-radius: 4px
-    height: 64px
-    width: 100%
-    border: 0
-    color: #fff
-    font-size: 16px
-    font-weight: 500
+    width: 35%
 
 .labelEmail,
 .labelPassword
@@ -46,23 +10,56 @@
 
 .errorEmail,
 .errorPassword
-    border: 1px solid red
-    color: #fff
-    text-align: center
-    padding: 5px 15px
     position: absolute
+    top: 65px
     left: 0
     right: 0
     bottom: 0
-    top: 65px
-
-.errorEmailDefault,
-.errorPasswordDefault
+    padding: 5px 15px
+    border: 1px solid red
+    text-align: center
+    color: #fff
 
 .errorEmailTrue,
 .errorPasswordTrue
-    border: 3px solid #0b9116   
-  
+    border: 3px solid #0b9116
+
 .errorEmailFalse,
 .errorPasswordFalse
-    border: 3px solid #910b0b 
+    border: 3px solid #910b0b
+
+.emailInput,
+.passwordInput
+    width: 100%
+    box-sizing: border-box
+    margin-bottom: 35px
+    padding: 21px 23px
+    border: 2px solid white
+    border-radius: 4px
+    font-size: 16px
+    color: #9CA8B7
+
+.wrapperCheckAndText
+    display: flex
+    justify-content: space-between
+    margin-top: 5px
+
+.textNearCheckbox
+    margin: 0 355px 25px 0
+    font-size: 15px
+    color: #fff
+
+.forgotPass
+    font-size: 15px
+    text-decoration: none
+    color: #fff
+
+.loginButton
+    height: 64px
+    width: 100%
+    background-color: #28d2d0
+    border: 0
+    border-radius: 4px
+    font-size: 16px
+    font-weight: 500
+    color: #fff

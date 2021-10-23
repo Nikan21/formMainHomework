@@ -26,7 +26,7 @@ export default function LoginForm() {
     <Formik
       initialValues={initialValues}
       onSubmit={onSumbit}
-      validationScheme = {scheme}
+      validationSchema = {scheme}
     >
         {(formikProps) =>{
             return(

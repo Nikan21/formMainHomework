@@ -32,7 +32,7 @@ export default function LoginForm() {
         {({errors, touched}) =>{
           
           const errorEmails = classNames (styles.errorEmailDefault,{
-            [styles.errorEmail]: errors.email
+            [styles.errorEmail]: errors.email && touched.email
           })
 
           const colorInputEmail = classNames(styles.emailInput,{
@@ -41,7 +41,7 @@ export default function LoginForm() {
           })
 
           const errorPassword = classNames (styles.errorPasswordDefault,{
-            [styles.errorPassword]: errors.password
+            [styles.errorPassword]: errors.password && touched.password
           })
 
           const colorInputPassword = classNames(styles.passwordInput,{

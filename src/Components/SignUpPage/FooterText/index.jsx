@@ -83,8 +83,10 @@ export default function FooterText() {
         </p>
         <h3>I have other questions! How can I get in touch with Squadhelp?</h3>
         <p>
-          Check out our <span className={styles.orangeText}>FAQs</span> or send us a <span className={styles.orangeText}>message</span>. For assistance with launching
-          a contest, you can also call us at (877) 355-3585 or schedule a
+          Check out our <span className={styles.orangeText}>FAQs</span> or send
+          us a <span className={styles.orangeText}>message</span>. For
+          assistance with launching a contest, you can also call us at (877)
+          355-3585 or schedule a
           <span className={styles.orangeText}>Branding Consultation</span>
         </p>
       </div>

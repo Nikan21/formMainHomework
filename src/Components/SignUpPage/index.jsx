@@ -4,7 +4,7 @@ import SignUpButton from "./LoginSignUp/index";
 import SignUpMainText from './SignUpMainText/index'
 import SignUpForm from "./SignUpForm/index";
 import SignUpWithGoogle from '../SignUpWithGoogle/index'
-
+import FooterText from './FooterText/index'
 import styles from "./signUpPage.module.sass";
 
 export default function SignUpPage() {
@@ -20,9 +20,12 @@ export default function SignUpPage() {
         <SignUpForm />
         <SignUpWithGoogle />
       </main>
-      <footer className={styles.footer}></footer>
     </div>
-    <div className={styles.loginWindowTwo}></div>
+    <div className={styles.loginWindowTwo}>
+      <footer className={styles.footer}>
+        <FooterText />
+      </footer>
+    </div>
     </>
   );
 }

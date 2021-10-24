@@ -25,23 +25,23 @@ export default function SignUpForm() {
     .shape({
       firstName: yup
         .string()
-        .matches(/^[A-z][a-z][0-9]$/, "First Name is not valid")
+        .matches(/[A-z][a-z][0-9]/, "First Name is not valid")
         .required("Field is empty"),
       lastName: yup
         .string()
-        .matches(/^[A-z][a-z][0-9]$/, "Last Name is not valid")
+        .matches(/[A-z][a-z][0-9]/, "Last Name is not valid")
         .required("Field is empty"),
       displayName: yup
         .string()
-        .matches(/^[A-z][a-z][0-9]$/, "Display Name is not valid")
+        .matches(/[A-z][a-z][0-9]/, "Display Name is not valid")
         .required("Field is empty"),
       email: yup
         .string()
-        .matches(/^[A-z][a-z][0-9][.@]$/, "Email adress is not valid")
+        .matches(/[A-z][a-z][0-9][.@]/, "Email adress is not valid")
         .required("Field is empty"),
       password: yup
         .string()
-        .matches(/^[A-z][a-z][0-9][.@]$/, "Password is not valid")
+        .matches(/[A-z][a-z][0-9]/, "Password is not valid")
         .required("Field is empty"),
       passwordConfirmed: yup.string().oneOf([yup.ref("password")]),
     });
@@ -109,7 +109,7 @@ export default function SignUpForm() {
 
         return (
           <Form className={styles.form}>
-            <label className={styles.labelFirstName}>
+            <label className={styles.labelFirstAndLastName}>
               <Field
                 className={colorInputFirstName}
                 name="firstName"
@@ -119,8 +119,6 @@ export default function SignUpForm() {
               <div className={errorFirstName}>
                 <ErrorMessage name="firstName" />
               </div>
-            </label>
-            <label className={styles.labelLastName}>
               <Field
                 className={colorInputLastName}
                 name="lastName"
@@ -131,7 +129,8 @@ export default function SignUpForm() {
                 <ErrorMessage name="lastName" />
               </div>
             </label>
-            <label className={styles.labelDisplayName}>
+
+            <label className={styles.labelDisplayNameAndEmail}>
               <Field
                 className={colorInputDisplayName}
                 name="displayName"
@@ -141,8 +140,6 @@ export default function SignUpForm() {
               <div className={errorDisplayName}>
                 <ErrorMessage name="displayName" />
               </div>
-            </label>
-            <label className={styles.labelEmail}>
               <Field
                 className={colorInputEmail}
                 name="email"
@@ -153,7 +150,8 @@ export default function SignUpForm() {
                 <ErrorMessage name="email" />
               </div>
             </label>
-            <label className={styles.labelPassword}>
+
+            <label className={styles.labelPasswords}>
               <Field
                 className={colorInputPassword}
                 name="password"
@@ -163,8 +161,6 @@ export default function SignUpForm() {
               <div className={errorPassword}>
                 <ErrorMessage name="password" />
               </div>
-            </label>
-            <label className={styles.labelConfirmPassword}>
               <Field
                 className={colorInputConfirmPassword}
                 name="confirmPassword"
@@ -175,9 +171,15 @@ export default function SignUpForm() {
                 <ErrorMessage name="confirmPassword" />
               </div>
             </label>
+
             <label className={styles.radioTextWrapper}>
               <div className={styles.radioWrapper}>
-                <Field name="radio" type="radio" value="first" />
+                <Field
+                  className={styles.radio}
+                  name="radio"
+                  type="radio"
+                  value="first"
+                />
               </div>
               <div className={styles.textWrapper}>
                 <p className={styles.firstLineTextRadio}>Join As a Buyer</p>
@@ -189,7 +191,12 @@ export default function SignUpForm() {
             </label>
             <label className={styles.radioTextWrapper}>
               <div className={styles.radioWrapper}>
-                <Field name="radio" type="radio" value="second" />
+                <Field
+                  className={styles.radio}
+                  name="radio"
+                  type="radio"
+                  value="second"
+                />
               </div>
               <div className={styles.textWrapper}>
                 <p className={styles.firstLineTextRadio}>
@@ -201,7 +208,7 @@ export default function SignUpForm() {
                 </p>
               </div>
             </label>
-            <label>
+            <label className={styles.checkboxWrapper}>
               <Field name="checkbox" type="checkbox"></Field>
               <p className={styles.textNearCheckbox}>
                 Allow Squadhelp to send marketing/promotional offers from time
@@ -213,7 +220,10 @@ export default function SignUpForm() {
             </button>
             <span className={styles.textWithLink}>
               By clicking this button, you agree to our{" "}
-              <a href="https://www.squadhelp.com/Terms&Conditions">
+              <a
+                className={styles.link}
+                href="https://www.squadhelp.com/Terms&Conditions"
+              >
                 Terms of Service.
               </a>
             </span>
